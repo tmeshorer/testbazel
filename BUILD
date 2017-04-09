@@ -1,7 +1,7 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_prefix")
+package(default_visibility = ["//visibility:public"])
 
-go_prefix("github.com/tmeshorer/testbazel")
+load("//tools:build_rules/go.bzl", "go_binary")
 
 go_binary(name="helloworld", 
-          src =[main.go])
+          src =["main.go"])
 
